@@ -2,9 +2,14 @@
    ROOT VARIABLES (Tema Warna)
 ============================= */
 :root {
-    --dark-bg: #222222;
+    --dark-bg: #111111;
+    --darker-bg: #1E1E1E;
     --accent-color: #ffc107;
+    --accent-light: #fff8e1;
+    --accent-soft: #fef6ea;
     --light-bg: #f8f9fa;
+    --lighter-bg: #ffffff;
+    --mid-bg: #efefef;
     --text-dark: #212529;
     --text-light: #ffffff;
 }
@@ -15,34 +20,11 @@
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    padding-top: 60px;
-    /* Ruang untuk navbar fixed-top */
+    padding-top: 60px; /* Ruang untuk navbar fixed-top */
+    background-color: var(--lighter-bg);
+    color: var(--text-dark);
 }
 
-/* =============================
-   NAVBAR
-============================= */
-.navbar-brand {
-    color: var(--accent-color) !important;
-    font-size: 1.5rem;
-}
-
-/* Ukuran dan tampilan logo */
-.navbar-brand .logo {
-  width: 50px;        /* ubah sesuai ukuran ideal logomu */
-  height: 50px;       /* bisa disesuaikan */
-  object-fit: fill;
-  border-radius: 100%; /* opsional: jika logomu bulat */
-}
-
-.navbar-brand .logo:hover {
-  filter: drop-shadow(0 0 8px #00aaff);
-  transform: scale(1.1);
-}
-
-/* =============================
-   SECTIONS
-============================= */
 section {
     padding: 80px 0;
 }
@@ -54,48 +36,103 @@ h2 {
 }
 
 /* =============================
+   NAVBAR
+============================= */
+.navbar {
+    background-color: var(--dark-bg) !important;
+}
+
+.navbar-brand {
+    color: var(--accent-color) !important;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+}
+
+/* Logo di navbar */
+.navbar-brand .logo {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-right: 8px;
+    transition: all 0.3s ease;
+}
+
+.navbar-brand .logo:hover {
+    filter: drop-shadow(0 0 10px var(--accent-color));
+    transform: scale(1.15) rotate(5deg);
+}
+
+/* =============================
    HERO SECTION
 ============================= */
-/* HERO SECTION */
 .hero {
     position: relative;
-    height: 60vh;
-    /* ubah tinggi sesuai keinginan (misal 60% dari tinggi layar) */
+    height: 70vh;
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
+    color: var(--text-light);
+    text-align: center;
 }
 
-/* VIDEO LATAR BELAKANG */
 .bg-video {
     position: absolute;
     top: 50%;
     left: 50%;
     min-width: 100%;
     min-height: 100%;
-    width: auto;
-    height: auto;
     transform: translate(-50%, -50%);
     object-fit: cover;
     opacity: 0.7;
-    /* opsional: membuat video lebih redup */
 }
 
-/* LAPISAN GELAP DI ATAS VIDEO */
 .overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.5);
-    /* efek gelap di atas video */
 }
 
-/* KONTEN DI DEPAN VIDEO */
 .hero-content {
     position: relative;
     z-index: 2;
 }
 
+/* =============================
+   SECTION BACKGROUNDS
+============================= */
+#program {
+    background-color: var(--light-bg);
+}
+
+#fasilitas {
+    background-color: var(--lighter-bg);
+}
+
+#jadwal {
+    background-color: var(--mid-bg);
+}
+
+#pendaftaran:first-of-type {
+    background-color: var(--accent-light);
+}
+
+#pendaftaran:nth-of-type(2) {
+    background-color: var(--accent-soft);
+}
+
+#kontak {
+    background-color: var(--darker-bg);
+    color: var(--text-light);
+}
+
+footer {
+    background-color: var(--dark-bg);
+    color: var(--text-light);
+}
 
 /* =============================
    CARD UMUM
@@ -104,11 +141,12 @@ h2 {
     border: none;
     border-radius: 12px;
     box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .15);
 }
 
 .card-title {
@@ -117,12 +155,18 @@ h2 {
 }
 
 /* =============================
-   CARD FASILITAS
+   CARD KHUSUS FASILITAS
 ============================= */
 .card-fasilitas {
     background-color: var(--light-bg);
     border: 1px solid #eee;
     box-shadow: none;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.card-fasilitas:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-5px);
 }
 
 /* =============================
@@ -135,12 +179,13 @@ h2 {
     font-weight: 700;
     padding: 10px 24px;
     border-radius: 50px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .btn-custom:hover {
     background: #ffca2c;
     color: var(--text-dark);
+    box-shadow: 0 0 15px rgba(255, 193, 7, 0.6);
 }
 
 /* =============================
@@ -161,11 +206,12 @@ h2 {
     background-color: var(--accent-color);
 }
 
-/* Perbaikan tampilan navbar pada layar kecil */
+/* =============================
+   RESPONSIVE NAVBAR (MOBILE)
+============================= */
 @media (max-width: 991px) {
     .navbar-nav {
-        background-color: #111;
-        /* memberi warna latar belakang */
+        background-color: var(--dark-bg);
         padding: 10px 0;
         border-radius: 8px;
     }
@@ -177,5 +223,23 @@ h2 {
 
     .navbar-nav .nav-link:hover {
         color: var(--accent-color) !important;
+    }
+}
+
+/* =============================
+   ANIMASI TAMBAHAN (opsional)
+============================= */
+.animate-fadeup {
+    animation: fadeUp 1.2s ease both;
+}
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
