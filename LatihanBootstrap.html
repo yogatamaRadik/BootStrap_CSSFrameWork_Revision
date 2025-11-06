@@ -21,9 +21,13 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm">
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">FITNESS PRO</a>
+            <!-- Logo + Tulisan -->
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+                <img src="asset/img/unnamed.jpg" alt="Logo Fitness Pro" class="logo me-2">
+                FITNESS PRO
+            </a>
 
-            <!-- Tombol toggle untuk tampilan mobile -->
+            <!-- Tombol toggle untuk mobile -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent"
                 aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -43,15 +47,19 @@
     </nav>
 
 
+
     <!-- MAIN CONTENT -->
     <main>
 
         <!-- HERO SECTION -->
-        <section id="hero" class="text-center text-white d-flex align-items-center justify-content-center">
-            <div class="container">
-                <h1 class="display-3 fw-bold">Capai Bentuk Terbaik Anda</h1>
-                <p class="lead my-4">Bergabunglah dengan Fitness Pro dan mulailah transformasi kesehatan Anda hari ini.
-                </p>
+        <section id="home" class="hero">
+            <video autoplay muted loop class="bg-video">
+                <source src="asset/vid/3195530-uhd_3840_2160_25fps.mp4" type="video/mp4" />
+            </video>
+            <div class="overlay"></div>
+            <div class="hero-content text-center text-white animate-fadeup">
+                <h1 class="display-4 fw-bold">Capai Bentuk Terbaik Anda!</h1>
+                <p class="lead">Bergabunglah dengan Fitness Pro dan mulailah transformasi kesehatan Anda hari ini.</p>
                 <a href="#pendaftaran" class="btn btn-custom btn-lg">Gabung Sekarang</a>
             </div>
         </section>
