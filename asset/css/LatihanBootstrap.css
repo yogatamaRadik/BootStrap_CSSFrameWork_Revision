@@ -1,57 +1,132 @@
+/* =============================
+   ROOT VARIABLES (Tema Warna)
+============================= */
+:root {
+  --dark-bg: #222222;
+  --accent-color: #ffc107;
+  --light-bg: #f8f9fa;
+  --text-dark: #212529;
+  --text-light: #ffffff;
+}
+
+/* =============================
+   GLOBAL STYLE
+============================= */
 body {
-  font-family: 'Segoe UI', Arial, sans-serif;
-  line-height: 1.6;
-  background-color: #f9f9f9;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+  padding-top: 70px; /* Ruang untuk navbar fixed-top */
 }
 
-.text-shadow {
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+/* =============================
+   NAVBAR
+============================= */
+.navbar-brand {
+  color: var(--accent-color) !important;
+  font-size: 1.5rem;
 }
 
-.hero {
-  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/61/Chelsea_FC_supporters.jpg");
-  background-size: cover;
-  background-position: center;
-  height: 90vh;
-  position: relative;
-  color: #fff;
+/* =============================
+   SECTIONS
+============================= */
+section {
+  padding: 80px 0;
 }
 
-.hero .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 28, 85, 0.65);
+h2 {
+  color: var(--text-dark);
+  font-weight: 700;
+  margin-bottom: 20px;
 }
 
-.player-card img {
-  height: 250px;
-  object-fit: cover;
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
+/* =============================
+   HERO SECTION
+============================= */
+#hero {
+  background-color: var(--dark-bg);
+  min-height: 80vh;
+  /* Opsional: tambahkan gambar latar belakang */
+  /* background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('path/to/image.jpg');
+     background-size: cover;
+     background-position: center; */
+}
+
+/* =============================
+   CARD UMUM
+============================= */
+.card {
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .08);
   transition: transform 0.3s ease;
 }
 
-.player-card img:hover {
-  transform: scale(1.05);
+.card:hover {
+  transform: translateY(-5px);
 }
 
-.card-body {
-  background-color: #fff;
-  border-bottom-left-radius: 8px;
-  border-bottom-right-radius: 8px;
+.card-title {
+  font-weight: 700;
+  color: var(--text-dark);
 }
 
-footer {
-  font-size: 0.9rem;
+/* =============================
+   CARD FASILITAS
+============================= */
+.card-fasilitas {
+  background-color: var(--light-bg);
+  border: 1px solid #eee;
+  box-shadow: none;
 }
 
+/* =============================
+   TOMBOL KUSTOM
+============================= */
+.btn-custom {
+  background: var(--accent-color);
+  color: var(--text-dark);
+  border: none;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-custom:hover {
+  background: #ffca2c;
+  color: var(--text-dark);
+}
+
+/* =============================
+   TABEL JADWAL
+============================= */
 .table {
-  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, .05);
 }
 
-.table-dark {
-  background-color: rgba(0, 0, 0, 0.4) !important;
+.table thead {
+  font-weight: 700;
+}
+
+/* =============================
+   CARD HEADER (PENDAFTARAN)
+============================= */
+.card-header.bg-custom {
+  background-color: var(--accent-color);
+}
+
+/* Perbaikan tampilan navbar pada layar kecil */
+@media (max-width: 991px) {
+  .navbar-nav {
+    background-color: #111;  /* memberi warna latar belakang */
+    padding: 10px 0;
+    border-radius: 8px;
+  }
+  .navbar-nav .nav-link {
+    color: #fff !important;
+    padding: 8px 0;
+  }
+  .navbar-nav .nav-link:hover {
+    color: var(--accent-color) !important;
+  }
 }
