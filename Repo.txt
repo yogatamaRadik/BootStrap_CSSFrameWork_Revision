@@ -1,0 +1,23 @@
+Repository Name: BootStrap_CSSFrameWork_Revision
+Repository URL: https://github.com/yogatamaRadik/BootStrap_CSSFrameWork_Revision.git
+Main Branch: main
+Branch : 2 branches (main, Web-Bootstrap)
+Last Commit: 2025-11-05
+Contributors: yogatamaRadik
+Description: 
+Website dengan bootstrap sederhana menggunakan HTML, CSS, dan BootStrap
+Hal yang harus diperhatikan dalam metode pengembangan:
+
+Pengembangan memanfaatkan repository GitHub
+Buatlah repository publik dalam akun GitHub untuk pengembangan web portofolio ini
+Branch main digunakan sebagai branch utama dan final
+Untuk latihan tahap ini, buat branch dengan nama Web-Bootstrap
+
+Hal yang harus diperhatikan membuat web:
+
+Layout one page seperti pada Latihan Web 03
+Menggunakan Bootstrap sepenuhnya
+Tampilan responsif
+Minimal ada 3 section utama dengan setidaknya 2 section akan dihubungkan dengan database
+Buat sekreatif mungkin dengan aset yang dikreasi sendiri atau aset yang lisensinya bebas
+
