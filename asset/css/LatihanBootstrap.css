@@ -124,11 +124,6 @@ h2 {
     background-color: var(--accent-soft);
 }
 
-#kontak {
-    background-color: var(--darker-bg);
-    color: var(--text-light);
-}
-
 footer {
     background-color: var(--dark-bg);
     color: var(--text-light);
@@ -243,3 +238,4 @@ footer {
         transform: translateY(0);
     }
 }
+
