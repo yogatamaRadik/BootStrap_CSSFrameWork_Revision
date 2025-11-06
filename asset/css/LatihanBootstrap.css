@@ -150,6 +150,38 @@ footer {
 }
 
 /* =============================
+   PROGRAM SECTION - FIX GAMBAR SERAGAM
+============================= */
+#program .card-img-top {
+    height: 220px;              /* tinggi seragam untuk semua gambar */
+    object-fit: cover;          /* potong gambar agar proporsional */
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+#program .card-img-top:hover {
+    transform: scale(1.05);     /* efek zoom halus saat hover */
+}
+
+#program {
+    background-color: #fff8e1;  /* warna lembut kuning pastel */
+}
+
+#program .card {
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+}
+
+#program .card-body {
+    background-color: #ffffff;
+}
+
+
+
+/* =============================
    CARD KHUSUS FASILITAS
 ============================= */
 .card-fasilitas {
