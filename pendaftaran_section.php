@@ -59,7 +59,7 @@
         </section>
 
         <!-- PENDAFTARAN SECTION DENGAN TRAINER -->
-        <section id="pendaftaran" class="bg-white text-center">
+        <section id="pendaftaran_trainer" class="bg-white text-center">
             <div class="container">
                 <h2>Membership + Trainer</h2>
                 <p>Pilih paket yang paling sesuai dengan trainer yang siap membantu anda!</p>

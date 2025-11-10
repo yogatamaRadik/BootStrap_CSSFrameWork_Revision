@@ -42,8 +42,6 @@
             <h4 class="fw-bold mb-3">Perkembangan Jumlah Member FITNESS PRO</h4>
             <canvas id="memberChart" height="100"></canvas>
         </div>
-        </div>
-        </section>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         <script>
