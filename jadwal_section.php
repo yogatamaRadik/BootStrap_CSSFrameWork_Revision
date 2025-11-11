@@ -1,4 +1,4 @@
-<section id="jadwal" class="bg-light text-center">
+<section id="jadwal" class="bg-light text-center fade-in">
             <div class="container">
                 <h2>Jadwal Kelas</h2>
                 <p>Jadwal untuk 10 November - 14 November 2025</p>

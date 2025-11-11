@@ -1,4 +1,4 @@
-<section id="kontak" class="bg-light text-center">
+<section id="kontak" class="bg-light text-center fade-in">
             <div class="container">
                 <h2>Daftar Sekarang</h2>
                 <p>Isi form di bawah ini dan tim kami akan segera menghubungi Anda.</p>

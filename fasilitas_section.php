@@ -1,4 +1,4 @@
-<section id="fasilitas" class="bg-white">
+<section id="fasilitas" class="bg-white fade-in">
             <div class="container text-center">
                 <h2>Fasilitas Premium</h2>
                 <p>Nikmati fasilitas terbaik untuk mendukung latihan Anda.</p>

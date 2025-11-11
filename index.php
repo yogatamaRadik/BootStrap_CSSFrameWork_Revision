@@ -108,6 +108,35 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
         </script>
-</body>
 
+    <?php
+    if (isset($_SESSION['nama_penghubung'])) {
+        session_unset();
+        session_destroy();
+    }
+    ?>
+
+    <!-- Script Scroll Restore -->
+    <script>
+        window.history.scrollRestoration = "manual";
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    </script>
+
+    <!-- Script Fade-in Scroll Animation -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('show');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.2 });
+
+            document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+        });
+    </script>
+    
+</body>
 </html>

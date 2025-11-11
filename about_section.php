@@ -1,4 +1,4 @@
- <section id="tentang" class="py-5">
+ <section id="tentang" class="py-5 fade-in">
             <div class="container">
                 <div class="text-center mb-5">
                     <h2 class="fw-bold text-warning">FITNESS PRO</h2>

@@ -1,4 +1,4 @@
-<section id="program" class="bg-light py-5">
+<section id="program" class="bg-light py-5 fade-in">
     <div class="container text-center">
         <h2 class="fw-bold mb-3">Program FITNESS PRO</h2>
         <p class="text-muted">Kami menawarkan berbagai program untuk semua level kebugaran.</p>

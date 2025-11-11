@@ -11,7 +11,6 @@ session_start();
                 <span class="ms-2 text-warning fade-in" id="nama-pendaftar">
                     - Halo <?= htmlspecialchars($_SESSION['nama_penghubung']); ?>
                 </span>
-                <?php unset($_SESSION['nama_penghubung']); // hapus setelah ditampilkan ?>
             <?php endif; ?>
         </a>
 
