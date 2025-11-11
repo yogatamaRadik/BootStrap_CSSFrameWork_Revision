@@ -24,7 +24,6 @@
 
         <!-- PROGRAM SECTION -->
         <?php include("program_section.php"); ?>
-        <?php include("koneksi.php"); ?>
 
         <!-- FASILITAS SECTION -->
         <?php include("fasilitas_section.php"); ?>
@@ -45,40 +44,54 @@
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <canvas id="memberChart" width="400" height="200"></canvas>
+
         <script>
-            const ctx = document.getElementById('memberChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'line',
-                data: {
-                    labels: ['2012', '2015', '2018', '2020', '2022', '2024'],
-                    datasets: [{
-                        label: 'Jumlah Member',
-                        data: [20, 150, 120, 300, 1500, 2000],
-                        borderColor: 'rgb(75, 192, 192)',
-                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
-                        fill: true,
-                        tension: 0.3,
-                        pointRadius: 5
-                    }]
-                },
-                options: {
-                    plugins: {
-                        legend: {
-                            display: true,
-                            labels: { color: '#333' }
+            fetch('get_member_data.php')
+                .then(response => response.json())
+                .then(chartData => {
+                    const ctx = document.getElementById('memberChart').getContext('2d');
+
+                    new Chart(ctx, {
+                        type: 'line',
+                        data: {
+                            labels: chartData.tahun,  // gunakan 'tahun' sesuai data dari PHP
+                            datasets: [{
+                                label: 'Jumlah Member',
+                                data: chartData.datamember, // gunakan 'datamember' sesuai data dari PHP
+                                borderColor: 'rgb(75, 192, 192)',
+                                backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                                fill: true,
+                                tension: 0.3,
+                                pointRadius: 5
+                            }]
                         },
-                        title: {
-                            display: true,
-                            text: 'Grafik Pertumbuhan Member (2012 - 2024)',
-                            font: { size: 16 }
+                        options: {
+                            plugins: {
+                                legend: {
+                                    display: true,
+                                    labels: { color: '#333' }
+                                },
+                                title: {
+                                    display: true,
+                                    text: 'Grafik Pertumbuhan Member (2012 - 2024)',
+                                    font: { size: 16 }
+                                }
+                            },
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    ticks: { color: '#333' }
+                                },
+                                x: {
+                                    ticks: { color: '#333' }
+                                }
+                            }
                         }
-                    },
-                    scales: {
-                        y: { beginAtZero: true },
-                        x: { ticks: { color: '#333' } }
-                    }
-                }
-            });
+                    });
+                })
+                .catch(error => console.error('Gagal memuat data chart:', error));
         </script>
 
         <!-- KONTAK SECTION -->

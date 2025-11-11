@@ -1,13 +1,14 @@
 <?php
-$host = "localhost";
-$user = "root";
-$pass = "";
-$db   = "fitnesspro";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$db = "fitnesspro_db";
 
-$conn = mysqli_connect($host, $user, $pass, $db);
+// Create connection
+$conn = new mysqli($servername, $username, $password);
 
-if (!$conn) {
-    die("Koneksi gagal: " . mysqli_connect_error());
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-echo 'Koneksi berhasil';
 ?>
