@@ -7,18 +7,7 @@
             <!-- Card 1 -->
 
             <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "fitnesspro_db";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
+            include("koneksi.php");
             $sql = "SELECT nama_kelas, desc_kelas, gambar_kelas  FROM fitnesspro_db.program_fitnesspro";
             $result = $conn->query($sql);
 

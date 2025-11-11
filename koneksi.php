@@ -5,7 +5,7 @@ $password = "";
 $db = "fitnesspro_db";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password);
+$conn = new mysqli($servername, $username, $password, $db);
 
 // Check connection
 if ($conn->connect_error) {

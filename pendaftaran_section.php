@@ -6,18 +6,7 @@
         <div class="row g-4 justify-content-center mt-4">
             <!-- Membership Non Trainer -->
             <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "fitnesspro_db";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
+            include("koneksi.php");
             $sql = "SELECT paket_kelas, harga_paket, desc_1, desc_2  FROM fitnesspro_db.membership_fitnesspro";
             $result = $conn->query($sql);
 
@@ -59,18 +48,7 @@
         <div class="row g-4 justify-content-center mt-4">
             <!-- Paket Bulanan -->
             <?php
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "fitnesspro_db";
-
-            // Create connection
-            $conn = new mysqli($servername, $username, $password, $dbname);
-            // Check connection
-            if ($conn->connect_error) {
-                die("Connection failed: " . $conn->connect_error);
-            }
-
+            include("koneksi.php");
             $sql = "SELECT paket_kelas2, harga_paket2, desc1_2, desc2_2  FROM fitnesspro_db.membershipwtrainer_fitnesspro";
             $result = $conn->query($sql);
 
