@@ -20,7 +20,7 @@
 body {
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
-    padding-top: 60px; /* Ruang untuk navbar fixed-top */
+    padding-top: 60px; 
     background-color: var(--lighter-bg);
     color: var(--text-dark);
 }
@@ -153,8 +153,8 @@ footer {
    PROGRAM SECTION - FIX GAMBAR SERAGAM
 ============================= */
 #program .card-img-top {
-    height: 220px;              /* tinggi seragam untuk semua gambar */
-    object-fit: cover;          /* potong gambar agar proporsional */
+    height: 220px;              
+    object-fit: cover;          
     border-top-left-radius: 12px;
     border-top-right-radius: 12px;
     width: 100%;
@@ -162,11 +162,11 @@ footer {
 }
 
 #program .card-img-top:hover {
-    transform: scale(1.05);     /* efek zoom halus saat hover */
+    transform: scale(1.05);     
 }
 
 #program {
-    background-color: #fff8e1;  /* warna lembut kuning pastel */
+    background-color: #fff8e1;  
 }
 
 #program .card {
@@ -254,7 +254,7 @@ footer {
 }
 
 /* =============================
-   ANIMASI TAMBAHAN (opsional)
+   ANIMASI TAMBAHAN
 ============================= */
 .animate-fadeup {
     animation: fadeUp 1.2s ease both;
