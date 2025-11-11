@@ -1,14 +1,24 @@
 <?php
-    include("koneksi.php");
+session_start();
+include("koneksi.php");
 
-    $nama = $_POST['nama_penghubung'];
-    $telp = $_POST['notelp_penghubung'];
-    $email = $_POST['email_penghubung'];
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    $nama  = $conn->real_escape_string(trim($_POST['nama_penghubung']));
+    $telp  = $conn->real_escape_string(trim($_POST['notelp_penghubung']));
+    $email = $conn->real_escape_string(trim($_POST['email_penghubung']));
 
-    $sql = "INSERT INTO inputdatakontak (nama_penghubung, notelp_penghubung, email_penghubung) VALUES ('$nama', '$telp', '$email')";
-    $result = $conn->query($sql);
+    $sql = "INSERT INTO inputdatakontak (nama_penghubung, notelp_penghubung, email_penghubung) 
+            VALUES ('$nama', '$telp', '$email')";
+    
+    if ($conn->query($sql) === TRUE) {
+        $_SESSION['nama_penghubung'] = $nama;
+    } else {
+        echo "Terjadi kesalahan: " . $conn->error;
+    }
 
     $conn->close();
 
-    header('location:index.php');
+    header("Location: index.php");
+    exit;
+}
 ?>
