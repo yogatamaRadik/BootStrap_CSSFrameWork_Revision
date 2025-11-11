@@ -24,6 +24,7 @@
 
         <!-- PROGRAM SECTION -->
         <?php include("program_section.php"); ?>
+        <?php include("koneksi.php"); ?>
 
         <!-- FASILITAS SECTION -->
         <?php include("fasilitas_section.php"); ?>
