@@ -4,8 +4,6 @@
         <p class="text-muted">Kami menawarkan berbagai program untuk semua level kebugaran.</p>
 
         <div class="row g-4 align-items-stretch mt-4 justify-content-center">
-            <!-- Card 1 -->
-
             <?php
             include("koneksi.php");
             $sql = "SELECT nama_kelas, desc_kelas, gambar_kelas  FROM fitnesspro_db.program_fitnesspro";

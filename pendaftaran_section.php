@@ -1,3 +1,4 @@
+<!-- PENDAFTARAN SECTION -->
 <section id="pendaftaran" class="bg-white text-center fade-in">
     <div class="container">
         <h2>Membership untuk Anda</h2>
@@ -55,7 +56,7 @@
         <p>Pilih paket yang paling sesuai dengan trainer yang siap membantu anda!</p>
 
         <div class="row g-4 justify-content-center mt-4">
-            <!-- Paket Bulanan -->
+
             <?php
             include("koneksi.php");
             $sql = "SELECT paket_kelas2, harga_paket2, desc1_2, desc2_2  FROM fitnesspro_db.membershipwtrainer_fitnesspro";
